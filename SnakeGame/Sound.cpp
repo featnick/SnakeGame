@@ -17,7 +17,7 @@ namespace SnakeGame
 		// Музыкальное сопровождение в сессии
 		assert(sound.music.openFromFile(RESOURCES_PATH + "music.wav"));
 		sound.music.setLoop(true);
-		sound.music.setVolume(20.f);
+		sound.music.setVolume(25.f);
 		sound.music.play();
 		
 		// Звук столкновения
@@ -27,7 +27,7 @@ namespace SnakeGame
 		InitSound(sound.endBuffer, sound.end, "lose.wav", 20.f);
 
 		// Звук нажатия на кнопки
-		InitSound(sound.clickBuffer, sound.click, "click.wav", 20.f);
+		InitSound(sound.clickBuffer, sound.click, "click.wav", 7.f);
 	}
 
 	void PlaySound(sf::Sound& sound, Game& game)

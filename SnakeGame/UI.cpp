@@ -115,6 +115,7 @@ namespace SnakeGame
 			{
 				ui.menuItem += 1;
 			}
+			PlaySound(game.sound.click, game);
 		}
 		else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Up))
 		{
@@ -126,6 +127,7 @@ namespace SnakeGame
 			{
 				ui.menuItem -= 1;
 			}
+			PlaySound(game.sound.click, game);
 		}
 
 		// Ставим тестуру выбранного пункта
@@ -162,6 +164,8 @@ namespace SnakeGame
 				{
 					game.gameState = state5;
 				}
+
+				PlaySound(game.sound.click, game);
 
 				// Обнуляем итератор по пунктам меню
 				ui.menuItem = 0;
